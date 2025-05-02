@@ -53,6 +53,8 @@ This vulnerability allows data leakage across accounts and users with no validat
 - No login required to retrieve another user's chat via token.
 - Confirmed repeatable with multiple valid tokens.
 
+https://github.com/mano257200/perplexity/blob/main/perplexity.png?raw=true
+
 
    
 
