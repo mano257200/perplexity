@@ -5,9 +5,20 @@
 
 ## 📌 Summary
 
-An attacker can access **private chat histories of other users** by modifying the token in a shared chat URL. There is **no authentication** or access control enforcement on these endpoints. This leads to a **serious breach of user privacy**.
+Perplexity AI includes chat tokens directly in the URL when users share chat sessions. These tokens are not protected by authentication or expiration controls. As a result, anyone who captures the URL (and its token) can access the full chat history — even outside the original session.\
 
 ---
+
+## ⚠️ Vulnerability Details
+
+- The chat token is embedded in the URL as a GET parameter.
+- URLs are accessible to anyone who has the link — with no authentication.
+- The token can be captured or leaked via:
+- Network sniffing tools like Wireshark on unsecured networks
+- Browser history
+- Referrer headers when links are clicked from other sites
+- Shared clipboard misuse
+- Proxy logs, DNS logs, etc.
 
 ## 🔗 Affected Endpoint
 
