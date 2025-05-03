@@ -90,6 +90,8 @@ This vulnerability allows data leakage across accounts and users with no validat
 - Performed successfully in **incognito mode**.
 - No login required to retrieve another user's chat via token.
 - Confirmed repeatable with multiple valid tokens.
+- The link is accessed by someone else (via referrer leak, history, logs, etc.).
+- The full conversation is visible — **no authentication required**.
 
 ![PoC Screenshot](https://github.com/mano257200/perplexity/blob/main/POC-Perplexity.png?raw=true)
 
