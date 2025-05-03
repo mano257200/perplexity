@@ -9,16 +9,42 @@ Perplexity AI includes chat tokens directly in the URL when users share chat ses
 
 ---
 
-## ⚠️ Vulnerability Details
+## 🛠️ Technical Details
 
-- The chat token is embedded in the URL as a GET parameter.
-- URLs are accessible to anyone who has the link — with no authentication.
-- The token can be captured or leaked via:
-- Network sniffing tools like Wireshark on unsecured networks
-- Browser history
-- Referrer headers when links are clicked from other sites
-- Shared clipboard misuse
-- Proxy logs, DNS logs, etc.
+### 1. Token Exposure via GET Parameter
+
+- Token is exposed directly in the browser URL (GET request).
+- Stored in:
+  - Browser history
+  - Referrer headers
+  - Server logs
+  - Network logs
+  - Analytics and tracking tools
+
+### 2. No Authentication or Access Control
+
+- Anyone with a valid token can view the chat — **no login or identity check** required.
+- Tokens remain permanently valid unless manually deleted.
+- No access logging or notification for the original user.
+
+### 3. Leakage Vectors
+
+Tokens can be leaked or intercepted via:
+- 🔍 Browser history
+- 🔗 HTTP `Referer` headers
+- 🌐 Unsecured network traffic (e.g., using Wireshark)
+- 📋 Clipboard sharing
+- 📁 Proxy or server logs (e.g., NGINX, Cloudflare)
+- 🧭 Auto-filled URLs and cached tabs
+
+### 4. No Security Features Present
+
+- ❌ No expiration on shared links
+- ❌ No revocation mechanism
+- ❌ No rate limiting or brute-force protection
+- ❌ No visibility controls or warning to user
+
+---
 
 ## 🔗 Affected Endpoint
 
@@ -42,13 +68,14 @@ Example token: hi-RxWG5knCTUurDLABy27PMg
 
 ## 💥 Impact
 
-- Full unauthorized access to another user's private chat data.
-- Potential exposure of personal or sensitive information.
-- Non-expiring, predictable links increase exploitability.
-- **Possible violation of data privacy laws**, such as:
-- General Data Protection Regulation (GDPR)
-- California Consumer Privacy Act (CCPA)
-
+- **Unauthorized access** to sensitive chatbot content, including:
+  - Legal, medical, or financial questions
+  - Personally identifiable information (PII)
+  - Corporate or proprietary information
+- **Severe privacy breach**, especially if shared unknowingly
+- **Regulatory compliance risks**, including:
+  - **GDPR** (Article 5, 32 – confidentiality & data minimization)
+  - **CCPA** (user data protection and unauthorized access)
 ---
 
 ## ⚠️ Severity
