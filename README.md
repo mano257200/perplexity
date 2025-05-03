@@ -1,4 +1,4 @@
-# 🔓 Vulnerability Report: Unauthorized Access to Chat Sessions in Perplexity AI
+# 🔓Vulnerability Report: Chat Token Exposure & Unauthorized Access in Perplexity AI
 
 **Severity:** 🚨 High  
 **Vendor:** [Perplexity AI](https://www.perplexity.ai)
