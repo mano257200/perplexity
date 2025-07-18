@@ -1,7 +1,18 @@
 # 🔓Vulnerability Report: Chat Token Exposure & Unauthorized Access in Perplexity AI
 
 **Severity:** 🚨 High  
-**Vendor:** [Perplexity AI](https://www.perplexity.ai)
+
+## 🏷 Vendor
+Perplexity AI ([https://www.perplexity.ai](https://www.perplexity.ai))
+
+## 🖥 Product
+Perplexity AI Web Application
+
+## 🆚 Versions Affected
+2.51.0
+
+## 🛠️ Vulnerable Component
+Shared Chat Session URLs (`/search/<token>` endpoint)
 
 ## 📌 Summary
 
