@@ -9,7 +9,7 @@ Perplexity AI ([https://www.perplexity.ai](https://www.perplexity.ai))
 Perplexity AI Web Application
 
 ## 🆚 Versions Affected
-2.51.0
+2.51.0 (GPT-4)
 
 ## 🛠️ Vulnerable Component
 Shared Chat Session URLs (`/search/<token>` endpoint)
